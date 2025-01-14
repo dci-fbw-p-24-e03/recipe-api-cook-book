@@ -71,6 +71,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = ("id","chef","title","description","meal_type","ingredients","created_at","image")
+
         #fields = "__all__"
 
     def validate_title(self,value):#validate_<field_name>
