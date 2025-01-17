@@ -142,11 +142,10 @@ AUTH_USER_MODEL = "api_app.CustomUser"
 
 SWAGGER_SETTINGS={
     "SECURITY_DEFINITIONS":{
-        'Token':{
+        'api_key':{
             "type":'apiKey',
             "in":"headers",
             'name': 'Authorization'
         }
     }
-   
 }

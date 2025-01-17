@@ -58,7 +58,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
         return value
     def validate(self, data):
         data['username']=self.slugify_username(data['username'])
-        data['first_name']=self.slugify_username(data['first_name'])
+        #data['first_name']=self.slugify_username(data['first_name'])
         data['bio'] = self.sanitize_html(data['bio'])
         data["bio"] = self.replace_dollar_sign(data["bio"])
         data['bio'] = self.slugify_bio(data['bio'])
